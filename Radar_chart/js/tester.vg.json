@@ -8,33 +8,13 @@
   
     "signals": [
       { "name": "radius", "update": "width / 2" },
-      { "name": "filterYear", "value": 2020, "bind": { "input": "range", "min": 2020, "max": 2024, "step": 1 } }
+      { "name": "filterYear", "value": 2020, "bind": { "input": "range", "min": 1750, "max": 2023, "step": 1 } }
     ],
   
     "data": [
       {
         "name": "table",
-        "values": [
-            {"key": "January", "value": 19, "year": 2021},
-            {"key": "February", "value": 22, "year": 2021},
-            {"key": "March", "value": 14, "year": 2021},
-            {"key": "April", "value": 14, "year": 2021},
-            {"key": "May", "value": 14, "year": 2021},
-            {"key": "June", "value": 14, "year": 2021},
-            {"key": "July", "value": 14, "year": 2021},
-            {"key": "August", "value": 14, "year": 2021},
-            {"key": "September", "value": 38, "year": 2021},
-            {"key": "October", "value": 23, "year": 2021},
-            {"key": "November", "value": 5, "year": 2021},
-            {"key": "December", "value": 27, "year": 2021},
-            {"key": "January", "value": 13, "year": 2022},
-            {"key": "February", "value": 12, "year": 2022},
-            {"key": "March", "value": 42, "year": 2022},
-            {"key": "April", "value": 13, "year": 2022},
-            {"key": "May", "value": 6, "year": 2022},
-            {"key": "June", "value": 15, "year": 2022},
-            {"key": "July", "value": 8, "year": 2022}
-        ]
+        "url": "Cleaned_Global_Temperatures.csv"
       },
       {
         "name": "filteredTable",
