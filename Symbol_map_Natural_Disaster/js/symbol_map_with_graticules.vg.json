@@ -23,6 +23,12 @@
       "data": {
         "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/Earthquakes_last10.csv"
       },
+      "transform": [
+        {
+          "calculate": "datum['Total Deaths'] === null ? 0 : log(datum['Total Deaths'] + 1)", 
+          "as": "Log Total Deaths"
+        }
+      ],
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
@@ -31,13 +37,13 @@
           "field": "Dis Mag Value",
           "type": "quantitative",
           "title": "Magnitude (Richter scale)",
-          "scale": {"domain": [0, 10]}
+          "scale": {"domain": [4, 9]}
         },
         "color": {
-          "field": "Total Deaths",
+          "field": "Log Total Deaths",
           "type": "quantitative",
           "title": "Log Total Deaths",
-          "scale": {"scheme": "reds", "type": "log"}
+          "scale": {"scheme": "reds"}
         },
         "tooltip": [
           {"field": "Country", "title": "Country"},
