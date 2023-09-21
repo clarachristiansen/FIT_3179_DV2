@@ -31,7 +31,7 @@
           "field": "Dis Mag Value",
           "type": "quantitative",
           "title": "Magnitude (Richter scale)",
-          "scale": {"domain": [4, 8]}
+          "scale": {"domain": [40, 8]}
         },
         "color": {
           "field": "Total Deaths",
