@@ -19,7 +19,7 @@
         "fields": ["Active"]
       }
     },
-    {"calculate": "datum.Active", "as": "Emission"}
+    {"calculate": "datum.Active + 0.1", "as": "Emission"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
