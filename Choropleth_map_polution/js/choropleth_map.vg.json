@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "COVID-19 Active Cases (10 Oct 2020)",
+  "title": "Emission by Country per Capita in 2021",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
@@ -10,23 +10,23 @@
   },
   "transform": [
     {
-      "lookup": "properties.Country",
+      "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/Choropleth_map_polution/data/Emissions_by_Country_percapita.csv"
+          "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/Choropleth_map_polution/data/Emissions_by_Country_percapita_cleaned.csv"
         },
         "key": "Country",
-        "fields": ["Total"]
+        "fields": ["Active"]
       }
     },
-    {"calculate": "datum.Total + 0.1", "as": "Active Cases"}
+    {"calculate": "datum.Active", "as": "Emission"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Active Cases",
+      "field": "Emission",
       "type": "quantitative",
-      "scale": {"type": "linear"}
+      "scale": {"type": "symlog"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
