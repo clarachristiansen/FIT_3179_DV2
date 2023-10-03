@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"Date": "1958-03-01", "CO2": 315.70},
+      {"Date": "1958-04-01", "CO2": 317.45},
+      {"Date": "1958-05-01", "CO2": 317.51},
+      {"Date": "1958-06-01", "CO2": 317.24},
+      {"Date": "1958-07-01", "CO2": 315.86},
+      {"Date": "1958-08-01", "CO2": 314.93},
+      {"Date": "1958-09-01", "CO2": 313.20},
+      {"Date": "1958-10-01", "CO2": 312.43},
+      {"Date": "1958-11-01", "CO2": 313.33},
+      {"Date": "1958-12-01", "CO2": 314.67},
+      {"Date": "1959-01-01", "CO2": 315.58},
+      {"Date": "1959-02-01", "CO2": 316.48},
+      {"Date": "1959-03-01", "CO2": 316.65},
+      {"Date": "1959-04-01", "CO2": 317.72},
+      {"Date": "1959-05-01", "CO2": 318.29},
+      {"Date": "1959-06-01", "CO2": 318.15},
+      {"Date": "1959-07-01", "CO2": 316.54},
+      {"Date": "1959-08-01", "CO2": 314.80},
+      {"Date": "1959-09-01", "CO2": 313.84},
+      {"Date": "1959-10-01", "CO2": 313.33},
+      {"Date": "1959-11-01", "CO2": 314.81},
+      {"Date": "1959-12-01", "CO2": 315.58},
+      {"Date": "1960-01-01", "CO2": 316.43}
+      ],
+    "format": {"parse": {"Date": "utc:'%Y-%m-%d'"}}
+  },
+  "width": 800,
+  "height": 500,
+  "transform": [
+    {"calculate": "year(datum.Date)", "as": "year"},
+    {"calculate": "floor(datum.year / 10)", "as": "decade"},
+    {
+      "calculate": "(datum.year % 10) + (month(datum.Date)/12)",
+      "as": "scaled_date"
+    },
+    {
+      "calculate": "datum.first_date === datum.scaled_date ? 'first' : datum.last_date === datum.scaled_date ? 'last' : null",
+      "as": "end"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "type": "quantitative",
+      "title": "Year into Decade",
+      "axis": {"tickCount": 11}
+    },
+    "y": {
+      "title": "CO2 concentration in ppm",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    },
+    "color": {
+      "field": "decade",
+      "type": "ordinal",
+      "scale": {"scheme": "magma"},
+      "legend": null
+    }
+  },
+
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "scaled_date"},
+        "y": {"field": "CO2"}
+      }
+    },
+    {
+      "mark": {"type": "text", "baseline": "top", "aria": false},
+      "encoding": {
+        "x": {"aggregate": "min", "field": "scaled_date"},
+        "y": {"aggregate": {"argmin": "scaled_date"}, "field": "CO2"},
+        "text": {"aggregate": {"argmin": "scaled_date"}, "field": "year"}
+      }
+    },
+    {
+      "mark": {"type": "text", "aria": false},
+      "encoding": {
+        "x": {"aggregate": "max", "field": "scaled_date"},
+        "y": {"aggregate": {"argmax": "scaled_date"}, "field": "CO2"},
+        "text": {"aggregate": {"argmax": "scaled_date"}, "field": "year"}
+      }
+    }
+  ],
+  "config": {"text": {"align": "left", "dx": 3, "dy": 1}}
+}
