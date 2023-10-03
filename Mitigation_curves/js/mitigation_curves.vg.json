@@ -1,11 +1,25 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Stock prices of 5 Tech Companies over Time.",
-  "data": {"url": "data/stocks.csv"},
+  "data": {"url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/Mitigation_curves/data/mitigation_curves_cleaned.csv"},
+  "width": 800,
+  "height": 500,
   "mark": "line",
   "encoding": {
-    "x": {"field": "date", "type": "temporal"},
-    "y": {"field": "price", "type": "quantitative"},
-    "color": {"field": "symbol", "type": "nominal"}
+    "x": {"field": "Date", "type": "temporal"},
+    "y": {"field": "CO2", "type": "quantitative"},
+    "color": {
+      "field": "Symbol",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Historical", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
+        "range": ["black", "#002E66", "#00377A", 
+        "#00408F", "#0049A3", "#0053B8", "#005CCC", "#0065E0", 
+        "#006EF5", "#0A78FF", "#1F84FF", "#338FFF", "#479AFF",
+        "#5CA5FF", "#70B0FF", "#85BCFF", "#99C7FF", "#ADD2FF",
+        "#C2DDFF", "D6E9FF", "#CED3DC", "#FADBDE", "#F5B7BC",
+        "#F0939B", "#EB6F7A", "#E74B58", "#E22837", "#C51B29"]
+      }
+    }
   }
 }
