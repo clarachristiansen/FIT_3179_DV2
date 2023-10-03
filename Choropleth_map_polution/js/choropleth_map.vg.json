@@ -10,23 +10,23 @@
   },
   "transform": [
     {
-      "lookup": "properties.NAME",
+      "lookup": "properties.Country",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/Choropleth_map_polution/data/Greenhouse_Gas_International.csv"
+          "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/Choropleth_map_polution/data/Emissions_by_Country_percapita.csv"
         },
         "key": "Country",
-        "fields": ["Active"]
+        "fields": ["Total"]
       }
     },
-    {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
+    {"calculate": "datum.Total + 0.1", "as": "Active Cases"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
       "field": "Active Cases",
       "type": "quantitative",
-      "scale": {"type": "log"}
+      "scale": {"type": "linear"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
