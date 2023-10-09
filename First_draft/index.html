@@ -83,7 +83,14 @@
       }).catch(console.error);
     </script>
     <div id="missing">
-      <img src="/data/missing.png" alt="Description of the image" width="300" height="200">
+      <!--<img src="/data/missing.png" alt="Description of the image" width="300" height="200">-->
+      <div id="area_chart"></div>
+      <script type="text/javascript">
+        var spec2 = "js/area_chart_ice.vg.json";
+        vegaEmbed('#area_chart', spec2).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+      </script>
     </div>
 
   </div>
