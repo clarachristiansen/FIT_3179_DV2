@@ -1,0 +1,26 @@
+#choropleth_map {
+	display: flex;
+    align-items: left;
+	top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+.title {
+	text-align: left;
+	font-size: 20px;
+	margin: 20px 20px;
+}
+
+.text {
+	text-align: center;
+	margin: 20px 0;
+	z-index: 1; /* Set a higher z-index to place the text on top */
+	position: relative; /* Ensure positioning works with z-index */
+}
+
+
+

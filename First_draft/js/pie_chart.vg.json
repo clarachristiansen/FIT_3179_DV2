@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "The six sector solution",
+    "description": "The six sector solution",
+    "data": {
+      "values": [
+        {"Category": "Energy", "Green House Gas in Gigatonnes": 12.5},
+        {"Category": "Industry", "Green House Gas in Gigatonnes": 7.3},
+        {"Category": "Agriculture, Food & Waste", "Green House Gas in Gigatonnes": 6.7},
+        {"Category": "Nature-based Solutions", "Green House Gas in Gigatonnes": 5.9},
+        {"Category": "Transport", "Green House Gas in Gigatonnes": 4.7},
+        {"Category": "Buildings and Cities", "Green House Gas in Gigatonnes": 5.9}
+      ]
+    },
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Green House Gas in Gigatonnes", "type": "quantitative"},
+      "tooltip": [
+        {"field": "Category", "type": "nominal"},
+        {"field": "Green House Gas in Gigatonnes", "type": "quantitative"}],
+      "color": {
+        "field": "Category",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Energy", "Industry", "Agriculture, Food & Waste", "Nature-based Solutions", "Transport", "Buildings and Cities"],
+          "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"]
+        }
+      }
+    }
+  }
