@@ -10,42 +10,87 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
   <title>Global Warming </title>
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Raleway:wght@700&display=swap" rel="stylesheet">
 
 </head>
 <body>
   <div class="title">
     <h1>Understanding Global Warming: Causes, Consequences, and Solutions</h1>
   </div>
-  <!-- Causes -->
-  <div id="choropleth_map"></div>
-  <script type="text/javascript">
-    var spec2 = "js/choropleth_map.vg.json";
-    vegaEmbed('#choropleth_map', spec2).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
 
-  <div class="text">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lorem eget lectus consequat commodo.</p>
+  <div class="intro_text">
+    <p>Climate change is a critical global issue caused by the significant increase in greenhouse gas emissions, especially carbon dioxide (CO2), in the past century. Human activities like fossil fuel burning, deforestation, industry, and agriculture release massive CO2 and other greenhouse gases into the atmosphere. These gases trap heat, resulting in a "greenhouse effect" and a gradual rise in Earth's average temperature. This disrupts natural climate patterns, leading to more severe weather events, rising sea levels, ecosystem changes, and food and water security threats. Addressing climate change requires collective efforts like cleaner energy, sustainable land use, and conservation. Throughout this page you will gain insights about the causes, consequences and solutions associated with climate change.</p>
   </div>
 
-  <div id="line_chart"></div>
-  <script type="text/javascript">
-    var spec2 = "js/Line_chart_emission_decades.json";
-    vegaEmbed('#line_chart', spec2).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
+
+  <!-- Causes -->
+  <div class="subtitle">
+    <h2>Causes</h2>
+  </div>
+
+  <div class="container">
+    <div class="choropleth_map_text">
+        <p>
+          Explore the map on the right to see the 2021 emissions of each country. Evidently, some nations emit a larger quantity of gases than others, leading to more significant environmental impacts. Here, it is crucial to acknowledge that countries vary in terms of technological, social and economic advancement and that we should save space in the carbon budget to allow progress of the mentioned categories in the less developed countries.
+          <br><br>
+          Displayed below is a map illustrating the average monthly CO2 emissions spanning several decades. It is clear that CO2 emissions have consistently increased both within individual decades and overall. This year marks the pinnacle of CO2 emissions, reaching an all-time high. Please keep in mind that the seasonal fluctuations, characterized by small peaks and valleys, are influenced by Northern Hemisphere summer vegetation growth, which reduces atmospheric carbon dioxide, and winter decay, which elevates it.
+        </p>
+    </div>
+
+    <div id="choropleth_map"></div>
+    <script type="text/javascript">
+      var spec2 = "js/choropleth_map.vg.json";
+      vegaEmbed('#choropleth_map', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+    </script>
+  </div>
+
+  <div class="container">
+    <div id="line_chart"></div>
+    <script type="text/javascript">
+      var spec2 = "js/line_chart_emission_decades.json";
+      vegaEmbed('#line_chart', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+    </script>
+    <div class="line_chart_text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sapien a ultrices dapibus. Suspendisse eget magna in mauris semper lacinia. Nullam dignissim sit amet arcu id cursus. Cras blandit dictum ligula. Cras vehicula ipsum non odio ultrices, quis condimentum nulla porta. Sed suscipit hendrerit nulla. Phasellus vel aliquet orci, a porttitor felis. Ut ex metus, commodo in gravida molestie, scelerisque quis metus. Pellentesque non justo elementum, feugiat velit vel, dictum augue. 
+        <br><br>
+        Pellentesque dictum mollis ornare. Integer semper lectus odio, sed pharetra ipsum rutrum nec. Nam tempus felis vitae orci lacinia rhoncus in eu nulla. Ut lacinia arcu vitae laoreet mollis. Curabitur tempor mi a quam hendrerit, at blandit justo interdum. Phasellus varius, erat sed mattis aliquam, velit erat sodales nisi, feugiat fringilla nibh ex sit amet urna. Etiam interdum porta ipsum, id euismod dui.
+      </p>
+  </div>
+  </div>
 
 
   <!-- Consequences -->
-  <div id="radar_chart"></div>
-  <script type="text/javascript">
-    var spec2 = "js/radar_chart.vg.json";
-    vegaEmbed('#radar_chart', spec2).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
+  <div class="subtitle">
+    <h2>Consequences</h2>
+  </div>
+  <div class="intro_text">
+    <p>About change in temperature. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sapien a ultrices dapibus. Suspendisse eget magna in mauris semper lacinia. Nullam dignissim sit amet arcu id cursus. Cras blandit dictum ligula. Cras vehicula ipsum non odio ultrices, quis condimentum nulla porta. Sed suscipit hendrerit nulla. Phasellus vel aliquet orci, a porttitor felis. Ut ex metus, commodo in gravida molestie, scelerisque quis metus. Pellentesque non justo elementum, feugiat velit vel, dictum augue. </p>
+  </div>
+  <div class="container">
+    <div id="radar_chart"></div>
+    <script type="text/javascript">
+      var spec2 = "js/radar_chart.vg.json";
+      vegaEmbed('#radar_chart', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+    </script>
+    <div id="missing">
+      <img src="/data/missing.png" alt="Description of the image" width="300" height="200">
+    </div>
+
+  </div>
+
+  <div class="between_text">
+    <p>About natural disasters. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sapien a ultrices dapibus. Suspendisse eget magna in mauris semper lacinia. Nullam dignissim sit amet arcu id cursus. Cras blandit dictum ligula. Cras vehicula ipsum non odio ultrices, quis condimentum nulla porta. Sed suscipit hendrerit nulla. Phasellus vel aliquet orci, a porttitor felis. Ut ex metus, commodo in gravida molestie, scelerisque quis metus. Pellentesque non justo elementum, feugiat velit vel, dictum augue. </p>
+  </div>
 
   <div id="symbol_map"></div>
   <script type="text/javascript">
@@ -56,14 +101,14 @@
   </script>
 
   <!-- Solutions -->
-  <div id="pie_chart"></div>
-  <script type="text/javascript">
-    var spec2 = "js/pie_chart.vg.json";
-    vegaEmbed('#pie_chart', spec2).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
+  <div class="subtitle">
+    <h2>Solutions</h2>
+  </div>
+  <div class="intro_text">
+    <p>About potential solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt sapien a ultrices dapibus. Suspendisse eget magna in mauris semper lacinia. Nullam dignissim sit amet arcu id cursus. Cras blandit dictum ligula. Cras vehicula ipsum non odio ultrices, quis condimentum nulla porta. Sed suscipit hendrerit nulla. Phasellus vel aliquet orci, a porttitor felis. Ut ex metus, commodo in gravida molestie, scelerisque quis metus. Pellentesque non justo elementum, feugiat velit vel, dictum augue. </p>
+  </div>
 
+  <div class="container">
   <div id="mitigation_curves"></div>
   <script type="text/javascript">
     var spec2 = "js/mitigation_curves.vg.json";
@@ -71,6 +116,15 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
+
+  <div id="pie_chart"></div>
+  <script type="text/javascript">
+    var spec2 = "js/pie_chart.vg.json";
+    vegaEmbed('#pie_chart', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+  </div>
 
 </body>
 </html>

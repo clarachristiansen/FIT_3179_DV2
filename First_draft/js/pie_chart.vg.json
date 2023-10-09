@@ -23,7 +23,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["Energy", "Industry", "Agriculture, Food & Waste", "Nature-based Solutions", "Transport", "Buildings and Cities"],
-          "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"]
+          "range": ["#ccebc5", "#b3cde3", "#fed9a6", "#fff3b5", "#fbb4ae", "#decbe4"]
         }
       }
     }

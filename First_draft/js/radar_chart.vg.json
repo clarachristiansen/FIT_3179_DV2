@@ -1,14 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "description": "Climate Radar Chart with Year Slider and Transparent Background (Inspired by Ed Hawkins)",
-    "width": 800,
-    "height": 800,
+    "width": 500,
+    "height": 500,
     "padding": 40,
     "autosize": { "type": "none", "contains": "padding" },
   
     "signals": [
       { "name": "radius", "update": "width / 2" },
-      { "name": "Year", "value": 2010, "bind": { "input": "range", "min": 1800, "max": 2015, "step": 5 } }
+      { "name": "Year", "value": 2010, "bind": { "input": "range", "min": 1800, "max": 2015, "step": 1 } }
     ],
   
     "data": [
@@ -2641,9 +2641,9 @@
       },
       {
         "name": "color",
-        "type": "ordinal",
-        "domain": { "data": "table", "field": "category" },
-        "range": { "scheme": "category10" }
+        "type": "sequential",
+        "domain": { "data": "table", "field": "year" },
+        "range": { "scheme": "category20b" }
       }
     ],
   
@@ -2676,22 +2676,22 @@
         "name": "categories",
         "zindex": 1,
         "from": {
-          "facet": { "data": "filteredTable", "name": "facet", "groupby": ["category"] }
+          "facet": { "data": "filteredTable", "name": "facet", "groupby": ["year"] }
         },
         "marks": [
           {
             "type": "line",
-            "name": "category-line",
+            "name": "year-line",
             "from": { "data": "facet" },
             "encode": {
               "enter": {
                 "interpolate": { "value": "linear-closed" },
                 "x": { "signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))" },
                 "y": { "signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))" },
-                "stroke": { "scale": "color", "field": "category" },
+                "stroke": { "scale": "color", "field": "year" },
                 "strokeWidth": { "value": 1 },
-                "fill": { "scale": "color", "field": "category" },
-                "fillOpacity": { "value": 0.005 },
+                "fill": { "scale": "color", "field": "year" },
+                "fillOpacity": { "value": 0 },
                 "tooltip": [
                     { "data": "table", "title":"Avg. Temperature:", "field": "value"
                     }

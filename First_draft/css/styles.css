@@ -1,26 +1,109 @@
+/* General */
+body {
+    position: static;
+    margin: 10%;
+}
+
+/* Intro */
+.title {
+	text-align: left;
+	font-size: 16px;
+	margin-bottom: -10px;
+	font-family: 'Manrope';
+	color: #4a4a4a;
+}
+
+.intro_text{
+	font-size: 12;
+	margin-bottom: -10px;
+	padding-top: 3px;
+	font-family: 'Inter';
+	color: #4a4a4a;
+}
+
+/* Causes */
+.subtitle {
+	margin-top: 60px;
+	text-align: left;
+	font-size: 16px;
+	margin-bottom: -20px;
+	font-family: 'Manrope';
+	color: #4a4a4a;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.choropleth_map_text {
+	width: 30%; /* Adjust the width as needed */
+	font-size: 12;
+	font-family: 'Inter';
+	color: #4a4a4a;
+}
+
 #choropleth_map {
 	display: flex;
-    align-items: left;
-	top:10px;
-	bottom: 100px; 
-	left: 100px;
+    align-items: right;
+	padding-top: 0px;
+	/*left: 100px;
 	right: 100px;
 	/*height: 1000px;
 	width: 800px;*/
+	width: 10%;
 }
 
-.title {
-	text-align: left;
-	font-size: 20px;
-	margin: 20px 20px;
+#line_chart{
+	display: flex;
+	align-items: left;
+	width: 75%;
 }
 
-.text {
-	text-align: center;
-	margin: 20px 0;
-	z-index: 1; /* Set a higher z-index to place the text on top */
-	position: relative; /* Ensure positioning works with z-index */
+.line_chart_text {
+	width: 30%; /* Adjust the width as needed */
+	font-size: 12;
+	padding-left: 100px;
+	font-family: 'Inter';
+	color: #4a4a4a;
 }
 
+/* Consequences */
+#radar_chart {
+	display: flex;
+    align-items: right;
+	padding-top: 0px;
+	width: 40%;
+}
 
+#missing {
+	display: flex;
+    align-items: right;
+	padding-top: 0px;
+	width: 300px;
+	padding-left: 200px;
+}
+
+.between_text{
+	font-size: 12;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding-top: 3px;
+	font-family: 'Inter';
+	color: #4a4a4a;
+}
+
+#symbol_map {
+	display: flex;
+	padding-left: 120px;
+	width: 95%;
+}
+
+/* Solutions */
+#pie_chart{
+	display: flex;
+    align-items: right;
+	padding-top: 0px;
+	width: 40%;
+}
 

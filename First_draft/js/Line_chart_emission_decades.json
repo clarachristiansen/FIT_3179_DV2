@@ -4,8 +4,8 @@
     "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/CO2_Actions/data/emission_per_month_cleaned.csv",
     "format": {"parse": {"Date": "utc:'%Y-%m-%d'"}}
   },
-  "width": 800,
-  "height": 500,
+  "width": 600,
+  "height": 400,
   "transform": [
     {"calculate": "year(datum.Date)", "as": "year"},
     {"calculate": "floor(datum.year / 10)", "as": "decade"},
@@ -32,7 +32,7 @@
     "color": {
       "field": "decade",
       "type": "ordinal",
-      "scale": {"scheme": "magma"},
+      "scale": {"scheme": "reds"},
       "legend": null
     }
   },

@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Stock prices of 5 Tech Companies over Time.",
   "data": {"url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/Mitigation_curves/data/mitigation_curves_cleaned.csv"},
-  "width": 800,
-  "height": 500,
+  "width": 700,
+  "height": 400,
   "layer": [
     {
     "mark": "line",
@@ -41,7 +41,7 @@
     },
     "encoding": {
       "x": {"field": "Date", "type": "temporal"},
-      "y": {"field": "CO2", "type": "quantitative"},
+      "y": {"field": "CO2", "type": "quantitative", "title": "Gigatons CO2"},
       "text": {"field": "text", "type": "nominal"}
     }
   }
