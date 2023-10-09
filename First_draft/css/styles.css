@@ -63,7 +63,7 @@ body {
 .line_chart_text {
 	width: 30%; /* Adjust the width as needed */
 	font-size: 12;
-	padding-left: 100px;
+	padding-left: 80px;
 	font-family: 'Inter';
 	color: #4a4a4a;
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 300,
-  "height": 200,
+  "width": 400,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/First_draft/data/Area_chart_ice/data.json",
     "format": {"type": "json"}
@@ -11,12 +11,13 @@
     "x": {
       "field": "year",
       "type": "temporal",
-      "axis": {"format": "%Y"}
+      "axis": {"format": "%Y"},
+      "title": "Year"
     },
     "y": {
       "aggregate": "sum",
       "field": "count",
-      "title": "Sea ice extent ()"
+      "title": "Sea ice extent (million square miles)"
     },
     "color": {
       "field": "series",
