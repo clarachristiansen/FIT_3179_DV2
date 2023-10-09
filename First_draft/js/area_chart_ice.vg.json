@@ -16,7 +16,7 @@
     "y": {
       "aggregate": "sum",
       "field": "count",
-      "title": "count"
+      "title": "Sea ice extent ()"
     },
     "color": {
       "field": "series",
