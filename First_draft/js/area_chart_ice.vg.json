@@ -6,9 +6,6 @@
     "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/First_draft/data/Area_chart_ice/data.json",
     "format": {"type": "json"}
   },
-  "transform": [
-    {"calculate": "if(datum.series == 'Series1', 1, if(datum.series == 'Series2', 2, if(datum.series == 'Series3', 3, if(datum.series == 'Series4', 4, 0))))", "as": "series_order"}
-  ],
   "mark": "area",
   "encoding": {
     "x": {
@@ -23,7 +20,8 @@
     "color": {
       "field": "series",
       "scale": {"scheme": "blues"},
-      "sort": {"field": "series", "order": "descending"}
+      "sort": {"field": "series", "order": "ascending"},
+      "title": "Ice Types"
     }
   }
 }
