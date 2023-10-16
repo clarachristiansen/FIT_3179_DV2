@@ -6,13 +6,14 @@
     "url": "https://raw.githubusercontent.com/clarachristiansen/FIT_3179_DV2/main/First_draft/data/Area_chart_ice/data.json",
     "format": {"type": "json"}
   },
+  "transform": [
+    {"calculate": "if(datum.series == 'Series1', 1, if(datum.series == 'Series2', 2, if(datum.series == 'Series3', 3, if(datum.series == 'Series4', 4, 0))))", "as": "series_order"}
+  ],
   "mark": "area",
   "encoding": {
     "x": {
-      "field": "year",
-      "type": "temporal",
-      "axis": {"format": "%Y", "tickCount": "year"},
-      "title": "Year"
+      "timeUnit": "yearmonth", "field": "date",
+      "axis": {"format": "%Y", "title": "Year"}
     },
     "y": {
       "aggregate": "sum",
@@ -21,7 +22,8 @@
     },
     "color": {
       "field": "series",
-      "scale": {"scheme": "blues"}
+      "scale": {"scheme": "blues"},
+      "sort": {"field": "series", "order": "descending"}
     }
   }
 }
