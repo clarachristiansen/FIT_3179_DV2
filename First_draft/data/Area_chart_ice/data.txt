@@ -1,4 +1,4 @@
-[{"series": "First-year ice", "year":1984, "count":0.4683419189, "date":"1984-01-01T08:00:00.000Z"},
+{"series": "First-year ice", "year":1984, "count":0.4683419189, "date":"1984-01-01T08:00:00.000Z"},
 {"series": "First-year ice", "year":1985, "count":0.4270289879, "date":"1985-01-01T08:00:00.000Z"},
 {"series": "First-year ice", "year":1986, "count":0.5532843937999999, "date":"1986-01-01T08:00:00.000Z"},
 {"series": "First-year ice", "year":1987, "count":0.4409286656, "date":"1987-01-01T08:00:00.000Z"},
@@ -192,4 +192,4 @@
 {"series": "5+ year ice", "year":2019, "count":0.02123561875, "date":"2019-01-01T08:00:00.000Z"},
 {"series": "5+ year ice", "year":2020, "count":0.08687298578000001, "date":"2020-01-01T08:00:00.000Z"},
 {"series": "5+ year ice", "year":2021, "count":0.05096548499, "date":"2021-01-01T08:00:00.000Z"},
-{"series": "5+ year ice", "year":2022, "count":0.049034974190000004, "date":"2022-01-01T08:00:00.000Z"}]
+{"series": "5+ year ice", "year":2022, "count":0.049034974190000004, "date":"2022-01-01T08:00:00.000Z"},

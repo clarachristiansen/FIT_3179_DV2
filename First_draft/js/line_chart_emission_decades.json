@@ -32,7 +32,7 @@
     "color": {
       "field": "decade",
       "type": "ordinal",
-      "scale": {"scheme": "reds"},
+      "scale": {"scheme": "oranges"},
       "legend": null
     }
   },

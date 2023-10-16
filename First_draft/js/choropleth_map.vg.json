@@ -26,7 +26,7 @@
     "color": {
       "field": "Emission",
       "type": "quantitative",
-      "scale": {"type": "symlog", "range": ["white", "black"]}
+      "scale": {"type": "symlog", "range": ["orange", "black"]}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},

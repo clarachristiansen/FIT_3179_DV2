@@ -42,8 +42,8 @@
         "color": {
           "field": "Log Total Deaths",
           "type": "quantitative",
-          "title": "Log Total Deaths",
-          "scale": {"scheme": "reds"}
+          "title": "Total Deaths (log)",
+          "scale": {"scheme": "oranges"}
         },
         "tooltip": [
           {"field": "Country", "title": "Country"},

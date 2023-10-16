@@ -11,7 +11,7 @@
     "x": {
       "field": "year",
       "type": "temporal",
-      "axis": {"format": "%Y"},
+      "axis": {"format": "%Y", "tickCount": "year"},
       "title": "Year"
     },
     "y": {

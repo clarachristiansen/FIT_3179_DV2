@@ -2643,7 +2643,7 @@
         "name": "color",
         "type": "sequential",
         "domain": { "data": "table", "field": "year" },
-        "range": { "scheme": "magma" }
+        "range": { "scheme": "oranges" }
       }
     ],
   
